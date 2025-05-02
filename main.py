@@ -13,14 +13,14 @@ logger.remove()  # Remove default logger
 logger.add(lambda msg: None, level="WARNING")  # Suppress DEBUG and INFO
 
 def start_cli():
-    print(Fore.CYAN + "Welcome to MAET (Mobile Application Exploitation Toolkit)")
+    print(Fore.CYAN + "Welcome to SAULMATE (Mobile Application Exploitation Toolkit)")
     print(Fore.YELLOW + "Type 'help' to get started or 'exit' to quit.")
 
     while True:
         try:
-            command = input(Fore.GREEN + "MAET> ").strip().lower()
+            command = input(Fore.GREEN + "SAULMATE> ").strip().lower()
             if command == "help":
-                print(Fore.MAGENTA + """
+                print(Fore.RED + """
  ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓██████████████▓▒░ ░▒▓██████▓▒░▒▓████████▓▒░▒▓████████▓▒░ 
 ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░   ░▒▓█▓▒░        
 ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░   ░▒▓█▓▒░        
@@ -31,7 +31,7 @@ def start_cli():
                                                                                                                 
                                                                                                                 
 
-                        Welcome to MAET (Mobile Application Exploitation Toolkit)!
+                        """+Style.RESET_ALL+Fore.WHITE+"""Welcome to SAULMATE (Mobile Application Testing and Exploitation)!
 
 Available Commands:
   help        - Show this help message with available commands.
@@ -44,13 +44,13 @@ Available Commands:
 
 Project Details:
   Description: A toolkit for mobile application exploitation.
-  GitHub: https://github.com/your-repo/maet
-  Author: Dimitri
+  GitHub: https://github.com/karthik-1916/saulmate
+  Author: Karthik
 
 Type a command to get started!
                 """ + Style.RESET_ALL)
             elif command in ["exit", "q"]:
-                print(Fore.RED + "Exiting MAET. Goodbye!")
+                print(Fore.RED + "Exiting SAULMATE. Goodbye!")
                 break
             elif command == "clear":
                 os.system('cls' if os.name == 'nt' else 'clear')
@@ -122,7 +122,7 @@ Type a command to get started!
             else:
                 print(Fore.RED + f"Unknown command: {command}. Type 'help' for assistance.")
         except KeyboardInterrupt:
-            print(Fore.RED + "\nExiting MAET. Goodbye!")
+            print(Fore.RED + "\nExiting SAULMATE. Goodbye!")
             break
         except Exception as e:
             print(Fore.RED + f"An error occurred: {e}")
